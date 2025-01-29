@@ -23,4 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 
-services
+
+#services
+hospitals.ts
+restaurants.ts
+tourisSpots.ts
