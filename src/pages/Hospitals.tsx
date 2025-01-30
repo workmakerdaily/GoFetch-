@@ -111,13 +111,13 @@ const Hospitals = () => {
         <div className="map-container relative min-h-screen min-w-screen py-24 px-32 flex flex-col md:flex-col">
             {/* 사이드바 */}
             <div className="flex justify-between items-end pb-4 sm:pb-6 lg:pb-10 pt-14">
-                <div className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-[#172554] font-bold text-start leading-none">병원</div>
+                <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#172554] font-bold text-start leading-none">병원</div>
                 <div className="text-3xl text-[#172554] font-bold leading-none hidden md:block">hospitals</div>
             </div>
             <hr className="border-b border-gray-300 mb-6" />
 
             <div className="flex md:flex-row w-full pt-8">
-                <div className="w-full md:w-80 h-[calc(100vh-64px)] bg-white shadow-lg p-4 overflow-y-auto">
+                <div className="w-full md:w-80 h-[calc(100vh-64px)] bg-white  p-4 overflow-y-auto">
                     <h2 className="text-lg font-bold mb-3">병원 목록</h2>
 
                     <input

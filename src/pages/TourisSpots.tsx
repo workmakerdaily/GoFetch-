@@ -69,15 +69,20 @@ const TouristSpots = () => {
     );
 
     return (
-        <div className="min-h-screen min-w-screen px-8">
-            <h1 className="text-3xl font-bold text-center mb-8">여행지</h1>
+        <div className="min-h-screen min-w-screen py-24 px-32 bg-gray-100">
+            <div className="flex justify-between items-end pb-4 sm:pb-6 lg:pb-10 pt-14">
+                <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#172554] font-bold text-start leading-none">여행지</div>
+                <div className="text-3xl text-[#172554] font-bold leading-none hidden md:block">TourisSpots</div>
+            </div>
+            <hr className="border-b border-gray-300 mb-6" />
+
             <div className="flex flex-col items-center gap-4 mb-8">
                 <input
                     type="text"
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                     placeholder="이름이나 주소를 검색하세요."
-                    className="px-4 py-2 border rounded-md w-full max-w-md"
+                    className="px-4 py-2 border-b w-full max-w-md focus:outline-none focus:border-gray-300"
                 />
                 <TouristCategory
                     categories={categories}
@@ -88,14 +93,21 @@ const TouristSpots = () => {
             {loading ? (
                 <div className="text-center mt-10">로딩 중...</div>
             ) : (
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-6">
                     {filteredSpots.map((spot, index) => (
-                        <div key={index} className="bg-white shadow-md rounded-lg p-4 hover:shadow-lg">
-                            <img src={spot.imageUrl || defaultImage} alt={spot.title} className="w-full h-40 object-cover rounded-md mb-4" />
-                            <h3 className="text-lg font-bold">{spot.title}</h3>
-                            <p className="text-sm text-gray-500">주소: {spot.addr1 || "N/A"}</p>
-                            <p className="text-sm text-gray-500">연락처: {spot.tel || "N/A"}</p>
+                        <div key={index} className="bg-white rounded-2xl pt-4 flex flex-col">
+                        <h3 className="text-lg font-bold px-6 pb-2">{spot.title}</h3>
+                        <p className="text-sm text-gray-500 px-6">주소: {spot.addr1 || "N/A"}</p>
+                        <p className="text-sm text-gray-500 px-6 pb-8">연락처: {spot.tel || "N/A"}</p>
+                        
+                        <div className="flex-grow">
+                            <img 
+                                src={spot.imageUrl || defaultImage} 
+                                alt={spot.title} 
+                                className="w-full h-full object-cover rounded-b-2xl"
+                            />
                         </div>
+                    </div>
                     ))}
                 </div>
             )}

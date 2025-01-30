@@ -38,7 +38,7 @@ const Home = () => {
             </section>
 
             {/* 2 */}
-            <section className="bg-gradient-to-r from-[#E8EAF6] to-[#C5CAE9] py-20 text-center">
+            <section className="bg-gradient-to-r from-[#E8EAF6] to-[#C5CAE9] py-40 text-center">
                 <div className="max-w-5xl mx-auto px-6">
                     {/* 아이콘과 제목 */}
                     <div className="flex flex-col items-center">
@@ -74,7 +74,7 @@ const Home = () => {
             </section>
 
             {/* 3 */}
-            <section className="py-16 bg-gray-100">
+            <section className="py-40 px-8 bg-gray-100">
                 <div className="max-w-7xl mx-auto px-6 text-center">
                     <h2 className="text-3xl font-bold text-gray-900">GoFetch!에서는 무엇을 할 수 있나요?</h2>
                     <p className="mt-2 text-gray-600">반려동물과 함께하는 최고의 장소를 찾아보세요!</p>
@@ -100,7 +100,7 @@ const Home = () => {
             </section>
 
             {/* 4 */}
-            <section className="py-16 bg-[#ffffff]">
+            <section className="py-40 px-8 bg-[#ffffff]">
                 <div className="max-w-7xl mx-auto px-6 text-center">
                     {/* 섹션 제목 */}
                     <h2 className="text-3xl font-bold text-gray-900">
@@ -160,7 +160,7 @@ const Home = () => {
             </section>
 
             {/* 5 */}
-            <section className="bg-[#3949AB] py-16 text-center text-white">
+            <section className="bg-[#3949AB] py-40 text-center text-white">
                 <h2 className="text-3xl font-bold">반려동물과의 완벽한 외출을 준비하세요!</h2>
                 <p className="mt-2 text-lg">여행지, 음식점, 병원 검색을 지금 바로 시작해보세요.</p>
 

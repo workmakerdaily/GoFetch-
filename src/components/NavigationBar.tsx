@@ -47,7 +47,7 @@ const NavigationBar = () => {
 
     return (
         <>
-            <header className="bg-transparent fixed top-0 left-0 w-full z-50">
+            <header className="bg-transparent fixed top-0 left-0 w-full z-50 px-8">
                 <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8">
                     <div className="flex lg:flex-1">
                         <Link to={ROOT_PATH} className="-m-1.5 p-1.5">

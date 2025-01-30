@@ -12,8 +12,8 @@ const TouristCategory = ({ categories, onSelectCategory, selectedCategory }: Pro
                 <div
                     key={category.code}
                     onClick={() => onSelectCategory(category.code)}
-                    className={`bg-white rounded-lg px-4 py-2 cursor-pointer hover:bg-gray-200 ${
-                        selectedCategory === category.code ? "border-2 border-teal-500" : ""
+                    className={`bg-white border-1 rounded-full px-4 py-2 cursor-pointer hover:opacity-50 ${
+                        selectedCategory === category.code ? "border-2 border-[#3949AB]" : ""
                     }`}
                 >
                     <h2 className="text-l font-semibold text-gray-800">{category.name}</h2>

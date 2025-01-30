@@ -9,12 +9,12 @@ import logo from "../assets/images/foot-logo.png";
 
 const Footer = () => {
     return (
-        <footer className="bg-[#101F42] text-gray-600">
-            <div className="max-w-7xl mx-auto px-6 py-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <footer className="bg-[#101F42] text-gray-400">
+            <div className="max-w-7xl mx-auto px-14 py-8 grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* 로고 & 소개 */}
                 <div className="flex flex-col items-center md:items-start">
                     <img src={logo} alt="GoFetch Logo" className="h-12 mb-3" />
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm text-gray-400">
                         반려동물과 함께하는 여행 & 라이프 서비스
                     </p>
                 </div>
