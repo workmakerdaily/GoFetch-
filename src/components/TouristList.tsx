@@ -1,16 +1,21 @@
 import React from "react";
 
+// interface: TouristSpot //
 interface TouristSpot {
     title: string;
     addr1: string;
     tel: string;
 }
 
+// interface: TouristListProps //
 interface TouristListProps {
     spots: TouristSpot[];
 }
 
+// component: 관광지 목록 표시 리스트 컴포넌트 //
 const TouristList: React.FC<TouristListProps> = ({ spots }) => {
+
+    // render: TouristList 컴포넌트 렌더링 //
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {spots.map((spot, index) => (

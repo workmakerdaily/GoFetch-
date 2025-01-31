@@ -1,16 +1,18 @@
 import logo from '../assets/images/logo.png';
 
+// interface: Props //
 interface Props {
     isOpen: boolean;
     onClose: () => void;
     onSignup: () => void;
 }
 
+// component: LoginModal 컴포넌트 //
 const LoginModal = ({ isOpen, onClose, onSignup }: Props) => {
     if (!isOpen) return null;
 
 
-
+    // render: LoginModal 컴포넌트 렌더링 //
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm">
             <div className="bg-white rounded-lg shadow-lg w-96 p-6 relative">

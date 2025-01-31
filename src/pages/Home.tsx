@@ -9,7 +9,10 @@ import gallery6 from '../assets/images/gallery6.jpg';
 import { FaPaw, FaUtensils, FaHospital } from 'react-icons/fa';
 import { HOSPITAL_SPOTS_PATH, RESTAURANT_SPOTS_PATH, TOURIST_SPOTS_PATH } from '../constants';
 
+// component: 메인 화면 컴포넌트 //
 const Home = () => {
+
+    // render: Home 컴포넌트 렌더링 //
     return (
         <main className="min-h-screen min-w-screen bg-gray-100">
             {/* 1 */}
@@ -40,7 +43,7 @@ const Home = () => {
             {/* 2 */}
             <section className="bg-gradient-to-r from-[#E8EAF6] to-[#C5CAE9] py-40 text-center">
                 <div className="max-w-5xl mx-auto px-6">
-                    {/* 아이콘과 제목 */}
+                    
                     <div className="flex flex-col items-center">
                         <FaPaw className="text-5xl text-[#3949AB] mb-4" />
                         <h2 className="text-4xl font-bold text-gray-900">
@@ -48,7 +51,7 @@ const Home = () => {
                         </h2>
                     </div>
 
-                    {/* 본문 텍스트 */}
+                    
                     <p className="mt-6 text-lg text-gray-800 leading-relaxed">
                         반려동물과 함께할 수 있는
                         <span className="font-bold text-[#3949AB]"> 여행지, 맛집, 동물병원</span>을
@@ -64,7 +67,6 @@ const Home = () => {
                         한눈에 정보를 확인하고, 안심하고 떠나세요. 🐾
                     </p>
 
-                    {/* 데코 요소 */}
                     <div className="mt-8 flex justify-center gap-4">
                         <div className="w-12 h-1 bg-[#3949AB] rounded-full"></div>
                         <div className="w-12 h-1 bg-[#FF6B6B] rounded-full"></div>
@@ -102,7 +104,7 @@ const Home = () => {
             {/* 4 */}
             <section className="py-40 px-8 bg-[#ffffff]">
                 <div className="max-w-7xl mx-auto px-6 text-center">
-                    {/* 섹션 제목 */}
+                    
                     <h2 className="text-3xl font-bold text-gray-900">
                         GoFetch!와 함께 <br className="hidden sm:block" /> 더 다양한 순간을 즐기세요
                     </h2>

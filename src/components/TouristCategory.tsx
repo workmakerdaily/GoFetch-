@@ -1,11 +1,14 @@
+// interface: Props //
 interface Props {
     categories: { name: string; code: string }[];
     onSelectCategory: (code: string) => void;
     selectedCategory: string | null;
 }
 
+// component: 관광지 카테고리 목록 표시 컴포넌트 //
 const TouristCategory = ({ categories, onSelectCategory, selectedCategory }: Props) => {
     
+    // render: TouristCategory 컴포넌트 렌더링 //
     return (
         <div className="flex flex-wrap justify-center gap-4 mb-8">
             {categories.map((category) => (

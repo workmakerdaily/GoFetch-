@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import {
     Dialog,
     DialogPanel,
@@ -17,7 +17,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { HOSPITAL_SPOTS_PATH, RESTAURANT_SPOTS_PATH, ROOT_PATH, TOURIST_SPOTS_PATH } from '../constants';
 
 
-
+// component: 내비게이션 컴포넌트 //
 const NavigationBar = () => {
 
     // function: 현재 경로를 가져오기 함수 //
@@ -30,6 +30,9 @@ const NavigationBar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [isLoginOpen, setIsLoginOpen] = useState(false);
     const [isSignupOpen, setIsSignupOpen] = useState(false);
+
+    // state: 스크롤 여부에 따른 네비게이션 바 스타일 변경 //
+    const [isScrolled, setIsScrolled] = useState(false);
 
     // event handler: 로그인 버튼 클릭 이벤트 핸들러 //
     const loginClickHandler = () => {
@@ -45,9 +48,28 @@ const NavigationBar = () => {
         setIsSignupOpen(true);
     };
 
+    // effect: 스크롤 이벤트를 감지하여 네비게이션 바 스타일 변경 //
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 10) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+    // render: NavigationBar 컴포넌트 렌더링 //
     return (
         <>
-            <header className="bg-transparent fixed top-0 left-0 w-full z-50 px-8">
+            <header className={`fixed top-0 left-0 w-full z-50 px-8 transition-all duration-300 ${
+                isScrolled ? "bg-white/50 shadow-md" : "bg-transparent"
+            }`}>
                 <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8">
                     <div className="flex lg:flex-1">
                         <Link to={ROOT_PATH} className="-m-1.5 p-1.5">

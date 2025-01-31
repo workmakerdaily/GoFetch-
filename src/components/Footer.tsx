@@ -7,11 +7,14 @@ import {
 } from "../constants";
 import logo from "../assets/images/foot-logo.png";
 
+// component: 웹사이트의 하단 영역 구성 컴포넌트 //
 const Footer = () => {
+
+    // render: Footer 컴포넌트 렌더링 //
     return (
         <footer className="bg-[#101F42] text-gray-400">
             <div className="max-w-7xl mx-auto px-14 py-8 grid grid-cols-1 md:grid-cols-3 gap-8">
-                {/* 로고 & 소개 */}
+
                 <div className="flex flex-col items-center md:items-start">
                     <img src={logo} alt="GoFetch Logo" className="h-12 mb-3" />
                     <p className="text-sm text-gray-400">
@@ -19,7 +22,6 @@ const Footer = () => {
                     </p>
                 </div>
 
-                {/* 내비게이션 */}
                 <div className="flex flex-col items-center md:items-start">
                     <h4 className="text-lg font-semibold mb-2">바로가기</h4>
                     <Link to={ROOT_PATH} className="text-sm hover:text-gray-300">메인</Link>
@@ -28,7 +30,6 @@ const Footer = () => {
                     <Link to={RESTAURANT_SPOTS_PATH} className="text-sm hover:text-gray-300">음식점</Link>
                 </div>
 
-                {/* 회사 정보 */}
                 <div className="flex flex-col items-center md:items-start">
                     <h4 className="text-lg font-semibold mb-2">회사 정보</h4>
                     <p className="text-sm">고펫치 (GoFetch!)</p>
@@ -37,7 +38,6 @@ const Footer = () => {
                 </div>
             </div>
 
-            {/* Copyright & 추가 링크 */}
             <div className="border-t border-gray-300 py-4 text-center text-sm">
                 &copy; {new Date().getFullYear()} GoFetch! All rights reserved.
             </div>

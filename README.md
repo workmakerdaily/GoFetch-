@@ -1,50 +1,67 @@
-# React + TypeScript + Vite
+<a href="https://club-project-one.vercel.app/" target="_blank">
+<img src="./src/assets/images/banner.png"배너" width="100%"/>
+</a>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# GoFetch 🐾
 
-Currently, two official plugins are available:
+**GoFetch**는 반려동물과 함께하는 여행을 위한 맞춤형 정보 제공 플랫폼입니다.  
+React, TypeScript를 기반으로 개발되었으며, 반려동물 동반 가능 장소, 음식점, 케어 서비스 등을 쉽게 검색할 수 있습니다.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<br/>
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### 주요 기능
+1. **반응형 UI 및 직관적인 디자인**
+    - Tailwind CSS를 활용하여 깔끔하고 직관적인 UI 구현
 
-- Configure the top-level `parserOptions` property like this:
+2. **반려동물 병원 지도 표시**
+    - 공공 API를 통해 병원의 위도(latitude)와 경도(longitude) 데이터를 가져와 지도에 표시
+    - React-Leaflet 및 Leaflet 라이브러리를 활용하여 사용자가 병원의 위치를 한눈에 확인 가능
+    - 병원 정보를 클릭하면 상세 정보를 제공
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+3. **반려동물 동반 여행지 검색**
+    - 공공데이터 API를 활용하여 반려동물 동반 가능 여행지, 음식점, 숙소 등의 정보를 제공
+    - 이름, 지역별 및 카테고리별 필터링을 지원하여 원하는 정보를 쉽게 찾을 수 있음
+
+---
+
+### 프로젝트 구조
+```plaintext
+GoFetch/
+├── src/
+│   ├── components/        # UI 컴포넌트 모음
+│   ├── pages/             # 주요 페이지 컴포넌트
+│   ├── services/          # API 요청 관리
+│   ├── utils/             # 공통 유틸리티 함수
+├── public/                # 정적 파일
+├── .gitignore             # Git 제외 파일 목록
+├── package.json           # 프로젝트 설정 및 의존성 관리
+├── tsconfig.json          # TypeScript 설정
+├── vite.config.ts         # Vite 설정 파일
+└── README.md              # 프로젝트 설명
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+<br/>
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+---
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### 기술 스택
+- **프론트엔드**: React, TypeScript, Vite
+- **스타일링**: Tailwind CSS
+- **지도 서비스**: Leaflet, React-Leaflet
+- **API 요청**: Axios
+
+<br/>
+
+---
+
+### 주요 라이브러리
+- **@headlessui/react**: 접근성 고려된 UI 컴포넌트
+- **@heroicons/react**: 아이콘 라이브러리
+- **@react-leaflet/core, leaflet**: 지도 및 위치 서비스 지원
+- **@tailwindcss/vite**: 스타일링
+- **axios**: API 요청
+- **react, react-dom**: UI 라이브러리
+- **@vitejs/plugin-react**: React + Vite 통합 지원
+- **typescript**: 정적 타입 지원
